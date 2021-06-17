@@ -1,0 +1,10 @@
+.search-wrapper {
+  margin-bottom: 10px;
+}
+
+.search-wrapper input {
+  padding: 8px 14px;
+  border: 1px solid #d0d0d0;
+  border-radius: 5px;
+  width: 100%;
+}
