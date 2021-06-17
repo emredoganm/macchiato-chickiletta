@@ -1,11 +1,11 @@
-import { random } from "faker";
+import { datatype, random } from "faker";
 import { search } from "../../bff/search";
 import { generateCoffees } from "../helpers";
 
 describe("Search specs", () => {
   it("should return expected coffees in case-insensitive mode", () => {
     const coffees = generateCoffees(10);
-    const searchTerm = random.word();
+    const searchTerm = `${random.word()}#${datatype.uuid()}`;
 
     coffees[0].title = `${random.word()}${searchTerm.toLowerCase()}${random.word()}`;
     coffees[2].title = `${random.word()} ${searchTerm.toUpperCase()}`;
