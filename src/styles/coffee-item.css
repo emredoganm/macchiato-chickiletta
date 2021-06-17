@@ -1,0 +1,14 @@
+.coffee-item {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.coffee-title {
+  margin-bottom: 12px;
+}
+
+.ingredients {
+  font-size: 0.8em;
+  margin-top: 12px;
+}

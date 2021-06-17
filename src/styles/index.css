@@ -9,6 +9,10 @@
   src: url(./fonts/roboto-regular.woff2);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
