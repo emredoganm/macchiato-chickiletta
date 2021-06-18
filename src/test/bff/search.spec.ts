@@ -16,4 +16,24 @@ describe("Search specs", () => {
     expect(result).toHaveLength(3);
     expect(result).toStrictEqual([coffees[0], coffees[2], coffees[4]]);
   });
+
+  it("should return the given data if term is undefined", () => {
+    const coffees = generateCoffees();
+    const searchTerm = undefined;
+
+    const result = search(coffees, searchTerm);
+
+    expect(result).toStrictEqual(coffees);
+  });
+
+  it("should return result with special characters", () => {
+    const coffees = generateCoffees(5);
+    const searchTerm = `${random.word()}#${datatype.uuid()}[`;
+
+    coffees[0].title = `${random.word()}${searchTerm}${random.word()}`;
+
+    const result = search(coffees, searchTerm);
+
+    expect(result[0]).toStrictEqual(coffees[0]);
+  });
 });
