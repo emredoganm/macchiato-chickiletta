@@ -1,0 +1,20 @@
+.category-filters {
+  display: flex;
+  justify-content: space-between;
+}
+
+.category-filters li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.category-filters li.selected {
+  font-weight: bold;
+  color: #0000ff;
+}
+
+@media (min-width: 768px) {
+  .category-filters {
+    flex-direction: column;
+  }
+}
