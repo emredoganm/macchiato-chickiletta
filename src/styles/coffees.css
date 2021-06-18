@@ -12,3 +12,8 @@
   font-size: 0.8em;
   margin-top: 12px;
 }
+
+.no-found {
+  color: #dd0000;
+  text-align: center;
+}
