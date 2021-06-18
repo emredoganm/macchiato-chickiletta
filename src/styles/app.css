@@ -1,0 +1,40 @@
+.app-wrapper,
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+.content,
+.sidebar {
+  padding: 20px;
+}
+
+.sidebar {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding-bottom: 0;
+}
+
+.app-title {
+  margin-bottom: 15px;
+  text-align: center;
+  line-height: 1.2em;
+}
+
+@media (min-width: 768px) {
+  .app-wrapper {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    flex: 0 0 250px;
+    border-bottom: none;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+  }
+
+  .content {
+    border-left: 1px solid #ccc;
+  }
+}
