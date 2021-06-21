@@ -52,7 +52,7 @@
       "!src/index.tsx",
       "!src/reportWebVitals.ts",
       "!**/models.{ts,tsx}",
-      "!src/{bff,components}/index.{ts,tsx}",
+      "!src/{bff,components,containers,context}/index.{ts,tsx}",
       "!**/node_modules/**"
     ]
   }
