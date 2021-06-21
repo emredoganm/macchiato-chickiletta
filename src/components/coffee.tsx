@@ -1,6 +1,5 @@
 import React from "react";
 import { Coffee as CoffeeProps } from "../models";
-import "../styles/coffee-item.css";
 
 export const Coffee: React.FC<CoffeeProps> = ({ title, ingredients, description, id }) => {
   return (
