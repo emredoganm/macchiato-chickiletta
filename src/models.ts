@@ -16,3 +16,8 @@ export interface AppContextModel {
   handleSearch: (term?: string) => void;
   setCategory: (category?: string) => void;
 }
+
+export interface SearchProps {
+  value: string;
+  search: (term?: string) => void;
+}
