@@ -20,6 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --collectCoverage=true --watchAll=false --detectOpenHandles",
+    "make-badges": "istanbul-badges-readme",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -42,9 +43,19 @@
   },
   "devDependencies": {
     "@types/faker": "^5.5.6",
-    "faker": "^5.5.3"
+    "faker": "^5.5.3",
+    "husky": "^6.0.0",
+    "istanbul-badges-readme": "^1.4.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test && yarn make-badges && git add 'README.md'"
+    }
   },
   "jest": {
+    "coverageReporters": [
+      "json-summary"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{ts,tsx}",
       "!**/*.d.ts",
